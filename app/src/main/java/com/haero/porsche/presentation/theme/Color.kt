@@ -1,6 +1,5 @@
 package com.haero.porsche.presentation.theme
 
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.ui.graphics.Color
 
 val PorscheRed = Color(0xFFB12B28)
