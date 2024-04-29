@@ -29,14 +29,14 @@ fun HomeScreen(
         Spacer(modifier = Modifier.height(8.dp))
         val pageList = listOf(
             ArticleBannerEntity(
-                "911, 포르쉐의 자존심",
-                "포르쉐의 헤리티지와도 같은 911 알아보기",
-                "https://pmepress.porsche.com/download/prod/presse_pag/PressBasicData.nsf/Download?OpenAgent&attachmentid=1913354&show=1"
-            ),
-            ArticleBannerEntity(
                 "포르쉐가 SUV를?",
                 "세간의 비판을 뚫고 등장한 게임 체인저",
                 "https://pmepress.porsche.com/prod/presse_pag/PressResources.nsf/jumppage/modelle-e3ll-cayenne_gts/\$file/e3ll_gts_suv_2024.jpg"
+            ),
+            ArticleBannerEntity(
+                "911, 포르쉐의 자존심",
+                "포르쉐의 헤리티지와도 같은 911 알아보기",
+                "https://pmepress.porsche.com/download/prod/presse_pag/PressBasicData.nsf/Download?OpenAgent&attachmentid=1913354&show=1"
             ),
             ArticleBannerEntity(
                 "보법부터 다른 엔트리 모델",
