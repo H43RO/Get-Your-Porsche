@@ -13,6 +13,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawWithContent
+import androidx.compose.ui.graphics.BlendMode
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
@@ -35,15 +38,22 @@ fun ArticleBanner(
             .clip(shape = RoundedCornerShape(16.dp)),
     ) {
         AsyncImage(
-            modifier = Modifier.fillMaxSize(),
             model = imageUrl,
             contentDescription = "BannerImage",
-            contentScale = ContentScale.Crop
-        )
-        Box(
+            contentScale = ContentScale.Crop,
             modifier = Modifier
                 .fillMaxSize()
-                .background(Color.Black.copy(alpha = 0.3F))
+                .drawWithContent {
+                    val colors = listOf(
+                        Color.Black,
+                        Color.Transparent
+                    )
+                    drawContent()
+                    drawRect(
+                        brush = Brush.verticalGradient(colors),
+                        blendMode = BlendMode.DstIn
+                    )
+                }
         )
         Column(
             modifier = Modifier

@@ -31,16 +31,16 @@ fun HomeScreen(
             ArticleBannerEntity(
                 "911, 포르쉐의 자존심",
                 "포르쉐의 헤리티지와도 같은 911 알아보기",
-                "https://di-uploads-pod29.dealerinspire.com/porscheontario1/uploads/2023/10/2024-Porsche-911.png"
+                "https://pmepress.porsche.com/download/prod/presse_pag/PressBasicData.nsf/Download?OpenAgent&attachmentid=1913354&show=1"
             ),
             ArticleBannerEntity(
                 "포르쉐가 SUV를?",
                 "세간의 비판을 뚫고 등장한 게임 체인저",
-                "https://presskit.porsche.de/models/assets/images/0/CayenneFVA_Slider_02_Kurzf-ed59bc20.jpg"
+                "https://pmepress.porsche.com/prod/presse_pag/PressResources.nsf/jumppage/modelle-e3ll-cayenne_gts/\$file/e3ll_gts_suv_2024.jpg"
             ),
             ArticleBannerEntity(
                 "보법부터 다른 엔트리 모델",
-                "만인의 드림카 718, 감히 엔트리라 칭할 수 있을까",
+                "감히 엔트리라 칭할 수 있을까에 대하여",
                 "https://pmepress.porsche.com/prod/presse_pag/PressResources.nsf/jumppage/modelle-cayman-cayman_gts_40/\$file/2020-718-cayman-gts_40.jpg"
             )
         )
@@ -63,6 +63,7 @@ fun HomeScreen(
         }
         Spacer(modifier = Modifier.height(8.dp))
         BannerIndicator(pagerState)
+        CatalogBanner()
     }
 }
 
