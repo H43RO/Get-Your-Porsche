@@ -25,7 +25,7 @@ fun HomeScreen(
         modifier = modifier,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        MainBanner(name)
+        MainBanner(userName = name, dreamCar = "911")
         Spacer(modifier = Modifier.height(8.dp))
         val pageList = listOf(
             ArticleBannerEntity(
@@ -38,6 +38,11 @@ fun HomeScreen(
                 "세간의 비판을 뚫고 등장한 게임 체인저",
                 "https://presskit.porsche.de/models/assets/images/0/CayenneFVA_Slider_02_Kurzf-ed59bc20.jpg"
             ),
+            ArticleBannerEntity(
+                "보법부터 다른 엔트리 모델",
+                "만인의 드림카 718, 감히 엔트리라 칭할 수 있을까",
+                "https://pmepress.porsche.com/prod/presse_pag/PressResources.nsf/jumppage/modelle-cayman-cayman_gts_40/\$file/2020-718-cayman-gts_40.jpg"
+            )
         )
         val pagerState = rememberPagerState(pageCount = { pageList.size })
         LaunchedEffect(key1 = Unit) {

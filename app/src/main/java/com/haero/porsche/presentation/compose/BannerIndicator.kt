@@ -26,14 +26,14 @@ fun BannerIndicator(
         repeat(state.pageCount) {
             Box(
                 modifier = Modifier
-                    .size(10.dp)
+                    .size(5.dp)
                     .background(
                         color = if (it == state.currentPage) Color.LightGray else Color.White,
                         shape = CircleShape
                     )
                     .clip(CircleShape)
                     .border(
-                        width = 1.dp,
+                        width = (0.5).dp,
                         color = Color.LightGray,
                         shape = CircleShape
                     )
