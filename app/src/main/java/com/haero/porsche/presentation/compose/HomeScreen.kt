@@ -4,12 +4,15 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.haero.porsche.presentation.theme.PorscheTheme
@@ -53,7 +56,10 @@ fun HomeScreen(
         }
         HorizontalPager(
             state = pagerState,
-            beyondBoundsPageCount = pageList.size
+            beyondBoundsPageCount = pageList.size,
+            modifier = Modifier
+                .padding(horizontal = 24.dp, vertical = 8.dp)
+                .clip(shape = RoundedCornerShape(16.dp))
         ) {
             ArticleBanner(
                 pageList[it].title,
@@ -63,6 +69,13 @@ fun HomeScreen(
         }
         Spacer(modifier = Modifier.height(8.dp))
         BannerIndicator(pagerState)
+
+        val postList = listOf(
+            CommunityPost("오늘도 라면 먹었습니다! (생일이라 계란 2개 풀었음)"),
+            CommunityPost("앞으로 34년만 더 저축하면 911 살 수 있네요"),
+            CommunityPost("아침에 실수로 포르쉐 박았어요.. 전 911 그렀을까요?")
+        )
+        CommunityBanner(modifier = Modifier.padding(24.dp), postList)
         CatalogBanner()
     }
 }

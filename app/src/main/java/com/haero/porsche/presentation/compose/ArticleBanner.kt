@@ -32,10 +32,7 @@ fun ArticleBanner(
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .height(150.dp)
-            .padding(horizontal = 24.dp, vertical = 8.dp)
-            .background(Color.White)
-            .clip(shape = RoundedCornerShape(16.dp)),
+            .height(150.dp),
     ) {
         AsyncImage(
             model = imageUrl,

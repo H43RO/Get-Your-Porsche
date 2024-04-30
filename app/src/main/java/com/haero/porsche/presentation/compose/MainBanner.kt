@@ -23,6 +23,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.haero.porsche.R
@@ -30,10 +31,11 @@ import com.haero.porsche.R
 @Composable
 fun MainBanner(
     userName: String,
-    dreamCar: String
+    dreamCar: String,
+    modifier: Modifier = Modifier
 ) {
     Box(
-        modifier = Modifier
+        modifier = modifier
             .background(Color.Black)
             .fillMaxWidth()
             .height(180.dp)
@@ -78,7 +80,8 @@ fun MainBanner(
             Text(
                 fontSize = 24.sp,
                 color = Color.White,
-                text = "${userName}님 반갑습니다"
+                text = "${userName}님 반갑습니다",
+                fontWeight = FontWeight.ExtraBold
             )
         }
     }

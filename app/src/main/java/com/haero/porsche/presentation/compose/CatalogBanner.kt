@@ -65,7 +65,7 @@ fun CatalogBanner(
             Text(
                 fontSize = 20.sp,
                 color = Color.Black,
-                fontWeight = FontWeight.Bold,
+                fontWeight = FontWeight.ExtraBold,
                 text = "나만의 포르쉐 만들기"
             )
         }
